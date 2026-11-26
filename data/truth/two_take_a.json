@@ -1,0 +1,48 @@
+{
+ "take": "A",
+ "sample_rate": 22050,
+ "hidden_open_f0_hz": 196.0,
+ "description": "even-harmonic opening; low fundamental then fades in for the same note -> opening should be relabelled to the low fundamental by offline revision",
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 0.2,
+   "kind": "silence",
+   "f0": null,
+   "label": "lead-in silence"
+  },
+  {
+   "t0": 0.2,
+   "t1": 1.4,
+   "kind": "tone",
+   "f0": 196.0,
+   "ambiguous": true,
+   "spectral_reading_f0": 392.0,
+   "label": "shared opening: even harmonics only (missing fundamental)"
+  },
+  {
+   "t0": 1.4,
+   "t1": 2.75,
+   "kind": "tone",
+   "f0": 196.0,
+   "ambiguous": false,
+   "label": "low fundamental + odd harmonics"
+  },
+  {
+   "t0": 2.75,
+   "t1": 3.05,
+   "kind": "silence",
+   "f0": null,
+   "label": "trailing silence"
+  }
+ ],
+ "revision_expectation": {
+  "region": [
+   0.2,
+   1.4
+  ],
+  "from_f0_hz": 392.0,
+  "to_f0_hz": 196.0,
+  "reason": "fundamental and odd harmonics appear during a legato continuation of the same note"
+ }
+}

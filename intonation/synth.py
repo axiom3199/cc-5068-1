@@ -42,8 +42,8 @@ class Segment:
     release: float = 0.05
     phase: float = 0.0
 
-    def freq_at(self, t: float) -> float:
-        rel = t - self.t0
+    def freq_at(self, rel: float) -> float:
+        """Instantaneous f0 at `rel` seconds *since the segment start*."""
         cents_mod = 0.0
         if self.vibrato_hz > 0 and rel >= self.vibrato_delay:
             vm_t = rel - self.vibrato_delay
@@ -298,6 +298,8 @@ def build_vibrato_fixtures() -> list[dict]:
                 "f0_center_hz": f0,
                 "vibrato_hz": vhz,
                 "vibrato_cents": vcents,
+                "vibrato_delay": 0.15,
+                "vibrato_ramp_s": 0.1,
                 "tone_t0": 0.10, "tone_t1": 0.10 + dur,
                 "sample_rate": SR,
             },

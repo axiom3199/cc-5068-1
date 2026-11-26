@@ -1,0 +1,125 @@
+{
+ "cases": {
+  "two_take_a": {
+   "audio": "data/audio/two_take_a.wav",
+   "truth": "data/truth/two_take_a.json",
+   "track": "data/tracks/two_take_a.json",
+   "duration_s": 3.0499773242630384
+  },
+  "two_take_b": {
+   "audio": "data/audio/two_take_b.wav",
+   "truth": "data/truth/two_take_b.json",
+   "track": "data/tracks/two_take_b.json",
+   "duration_s": 3.0499773242630384
+  },
+  "fixture_h1": {
+   "audio": "data/audio/fixture_h1.wav",
+   "truth": "data/truth/fixture_h1.json",
+   "track": "data/tracks/fixture_h1.json",
+   "duration_s": 1.3
+  },
+  "fixture_h2": {
+   "audio": "data/audio/fixture_h2.wav",
+   "truth": "data/truth/fixture_h2.json",
+   "track": "data/tracks/fixture_h2.json",
+   "duration_s": 1.2
+  },
+  "fixture_h3": {
+   "audio": "data/audio/fixture_h3.wav",
+   "truth": "data/truth/fixture_h3.json",
+   "track": "data/tracks/fixture_h3.json",
+   "duration_s": 1.1
+  },
+  "fixture_h4": {
+   "audio": "data/audio/fixture_h4.wav",
+   "truth": "data/truth/fixture_h4.json",
+   "track": "data/tracks/fixture_h4.json",
+   "duration_s": 1.0
+  },
+  "fixture_h5": {
+   "audio": "data/audio/fixture_h5.wav",
+   "truth": "data/truth/fixture_h5.json",
+   "track": "data/tracks/fixture_h5.json",
+   "duration_s": 1.0
+  },
+  "fixture_h6": {
+   "audio": "data/audio/fixture_h6.wav",
+   "truth": "data/truth/fixture_h6.json",
+   "track": "data/tracks/fixture_h6.json",
+   "duration_s": 1.7
+  },
+  "fixture_h7": {
+   "audio": "data/audio/fixture_h7.wav",
+   "truth": "data/truth/fixture_h7.json",
+   "track": "data/tracks/fixture_h7.json",
+   "duration_s": 0.9
+  },
+  "fixture_h8": {
+   "audio": "data/audio/fixture_h8.wav",
+   "truth": "data/truth/fixture_h8.json",
+   "track": "data/tracks/fixture_h8.json",
+   "duration_s": 0.8500226757369614
+  },
+  "fixture_missing_fund": {
+   "audio": "data/audio/fixture_missing_fund.wav",
+   "truth": "data/truth/fixture_missing_fund.json",
+   "track": "data/tracks/fixture_missing_fund.json",
+   "duration_s": 1.3
+  },
+  "fixture_dom2": {
+   "audio": "data/audio/fixture_dom2.wav",
+   "truth": "data/truth/fixture_dom2.json",
+   "track": "data/tracks/fixture_dom2.json",
+   "duration_s": 1.3
+  },
+  "fixture_vib_slow": {
+   "audio": "data/audio/fixture_vib_slow.wav",
+   "truth": "data/truth/fixture_vib_slow.json",
+   "track": "data/tracks/fixture_vib_slow.json",
+   "duration_s": 1.7500226757369615
+  },
+  "fixture_vib_fast": {
+   "audio": "data/audio/fixture_vib_fast.wav",
+   "truth": "data/truth/fixture_vib_fast.json",
+   "track": "data/tracks/fixture_vib_fast.json",
+   "duration_s": 1.5500226757369615
+  },
+  "fixture_vib_wide": {
+   "audio": "data/audio/fixture_vib_wide.wav",
+   "truth": "data/truth/fixture_vib_wide.json",
+   "track": "data/tracks/fixture_vib_wide.json",
+   "duration_s": 1.5500226757369615
+  },
+  "fixture_vib_low": {
+   "audio": "data/audio/fixture_vib_low.wav",
+   "truth": "data/truth/fixture_vib_low.json",
+   "track": "data/tracks/fixture_vib_low.json",
+   "duration_s": 1.8499773242630386
+  },
+  "fixture_noisy_short": {
+   "audio": "data/audio/fixture_noisy_short.wav",
+   "truth": "data/truth/fixture_noisy_short.json",
+   "track": "data/tracks/fixture_noisy_short.json",
+   "duration_s": 0.44997732426303855
+  },
+  "fixture_noisy_shorter": {
+   "audio": "data/audio/fixture_noisy_shorter.wav",
+   "truth": "data/truth/fixture_noisy_shorter.json",
+   "track": "data/tracks/fixture_noisy_shorter.json",
+   "duration_s": 0.36997732426303853
+  },
+  "fixture_noisy_staccato": {
+   "audio": "data/audio/fixture_noisy_staccato.wav",
+   "truth": "data/truth/fixture_noisy_staccato.json",
+   "track": "data/tracks/fixture_noisy_staccato.json",
+   "duration_s": 0.32997732426303855
+  },
+  "fixture_silence_noise": {
+   "audio": "data/audio/fixture_silence_noise.wav",
+   "truth": "data/truth/fixture_silence_noise.json",
+   "track": "data/tracks/fixture_silence_noise.json",
+   "duration_s": 2.2
+  }
+ },
+ "generated_at": "2026-11-26T20:32:06"
+}

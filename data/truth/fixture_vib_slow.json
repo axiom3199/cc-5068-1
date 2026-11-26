@@ -1,0 +1,11 @@
+{
+ "kind": "vibrato",
+ "f0_center_hz": 196.0,
+ "vibrato_hz": 4.0,
+ "vibrato_cents": 25.0,
+ "vibrato_delay": 0.15,
+ "vibrato_ramp_s": 0.1,
+ "tone_t0": 0.1,
+ "tone_t1": 1.5,
+ "sample_rate": 22050
+}

@@ -405,8 +405,13 @@ def octave_relationships(cands: list[Candidate], cfg: AnalysisConfig) -> dict:
             continue
         # c an octave below best?
         if abs(cents(best.f0, 2.0 * c.f0)) <= cfg.octave_pair_cents:
+            # Only a *missing-fundamental* lower reading is a genuine octave
+            # ambiguity: the lower candidate must be viable and must NOT have
+            # its own fundamental, otherwise it is a real sub-octave tone.
+            if not c.viable or c.fundamental_present:
+                continue
             ratio = c.score / best.score if best.score > 1e-9 else 0.0
-            if c.viable and ratio > best_ratio:
+            if ratio > best_ratio:
                 best_ratio = ratio
                 lower = c
     has_pair = lower is not None and best_ratio >= cfg.octave_ambiguity_margin

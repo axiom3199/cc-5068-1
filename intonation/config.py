@@ -61,7 +61,7 @@ class AnalysisConfig:
     retention_ms: float = 450.0     # a candidate survives this long awaiting evidence
     decision_deadline_beats: float = 1.0
     tempo_bpm: float = 100.0        # beat = 0.6 s; deadline given per recording
-    octave_ambiguity_margin: float = 0.85  # score ratio that counts as ambiguous
+    octave_ambiguity_margin: float = 0.55  # score ratio that counts as ambiguous
 
     # --- onset detection --------------------------------------------------
     onset_flux_percentile: float = 92.0

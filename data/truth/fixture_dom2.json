@@ -1,0 +1,13 @@
+{
+ "kind": "harmonic_group",
+ "f0_hz": 130.81,
+ "harmonics": {
+  "1": 0.1,
+  "2": 0.6,
+  "3": 0.1,
+  "4": 0.25
+ },
+ "tone_t0": 0.1,
+ "tone_t1": 1.1,
+ "sample_rate": 22050
+}

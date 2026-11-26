@@ -1,0 +1,8 @@
+{
+ "kind": "noisy_short",
+ "f0_hz": 174.61,
+ "tone_t0": 0.08,
+ "tone_t1": 0.18,
+ "noise_amp": 0.12,
+ "sample_rate": 22050
+}
