@@ -18,6 +18,7 @@
   "candidate_score_ratio": 0.18,
   "cluster_cents": 30.0,
   "octave_pair_cents": 45.0,
+  "viable_promotion_margin": 0.85,
   "harmonic_weight_power": 1.0,
   "match_tolerance_cents": 70.0,
   "match_tolerance_min_hz": 8.0,
@@ -80103,17 +80104,6 @@
    "resolved": true,
    "resolution": "no_later_evidence_keep_upper",
    "chosen_f0_hz": 261.631
-  },
-  {
-   "start_index": 111,
-   "end_index": 154,
-   "start_time": 1.3351,
-   "deadline_time": 1.9351,
-   "lower_f0_hz": 130.816,
-   "upper_f0_hz": 261.631,
-   "resolved": true,
-   "resolution": "no_later_evidence_keep_upper",
-   "chosen_f0_hz": 261.631
   }
  ],
  "revisions": [],
@@ -80127,7 +80117,7 @@
   "silence_frames": 77,
   "relabelled_frames": 0,
   "n_notes": 3,
-  "n_deferrals": 2,
+  "n_deferrals": 1,
   "n_revisions": 0,
   "valid_coverage": 0.24175824175824176
  },

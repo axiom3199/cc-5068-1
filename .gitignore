@@ -26,3 +26,6 @@ __pycache__/
 
 .venv/
 get-pip.py
+
+# Scratch files written when local WAVs are uploaded.
+/data/uploads/

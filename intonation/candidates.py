@@ -352,6 +352,27 @@ def generate_candidates(peaks, yin, cfg, extra_sources=None) -> list[Candidate]:
             continue
         dedup.append(c)
     cands = dedup
+
+    # A candidate that explains essentially every strong peak (``viable``) is a
+    # better physical description than one that only explains a subset, even
+    # when the latter has a loud, isolated low harmonic.  Promote the best
+    # viable candidate over a non-viable leader only when its score is
+    # comparable (within this margin), so a genuinely better non-viable reading
+    # (e.g. one with far more explained low-harmonic energy) is not displaced.
+    # This is what stops a decaying tone — whose weak fundamental has faded
+    # while its dominant second harmonic still rings — from being read an
+    # octave high.
+    if cands and not cands[0].viable:
+        lead = cands[0]
+        viable_best = None
+        for c in cands[1:]:
+            if c.viable and c.score >= cfg.viable_promotion_margin * lead.score:
+                if viable_best is None or c.score > viable_best.score:
+                    viable_best = c
+        if viable_best is not None:
+            cands.remove(viable_best)
+            cands.insert(0, viable_best)
+
     best = cands[0].score
     kept: list[Candidate] = []
     for i, c in enumerate(cands):
@@ -379,6 +400,19 @@ def generate_candidates(peaks, yin, cfg, extra_sources=None) -> list[Candidate]:
                 break
 
     kept.sort(key=lambda c: c.score, reverse=True)
+    # Honour the viability preference in the final order too: a viable candidate
+    # within the promotion margin of the top score should lead, so downstream
+    # frame/tracker logic sees the physically better description first.
+    if kept and not kept[0].viable:
+        top_score = kept[0].score
+        chosen = None
+        for c in kept[1:]:
+            if c.viable and c.score >= cfg.viable_promotion_margin * top_score:
+                chosen = c
+                break
+        if chosen is not None:
+            kept.remove(chosen)
+            kept.insert(0, chosen)
     for i, c in enumerate(kept):
         c.rank = i
     for c in cands:
@@ -390,24 +424,33 @@ def generate_candidates(peaks, yin, cfg, extra_sources=None) -> list[Candidate]:
 def octave_relationships(cands: list[Candidate], cfg: AnalysisConfig) -> dict:
     """Describe octave partners among the retained candidates.
 
-    Returns a dict describing whether there is a *viable* lower-octave
-    (missing-fundamental) hypothesis relative to the best candidate, which is
-    what triggers decision deferral.
+    A harmonic series is spectrally indistinguishable from an even-harmonic
+    series one octave lower (the sub-octave reading has its fundamental and odd
+    harmonics missing, its even harmonics coincident with the upper reading).
+    So a frame is octave-uncertain when *both* the best candidate and a viable
+    sub-octave candidate explain the strong peaks with comparable scores.
+
+    This function reports that purely spectral relation.  It does NOT decide
+    the octave — that is done over time by the tracker / streaming gate using
+    attack and sustain evidence, exactly because a single frame cannot.
     """
+    empty = {"has_pair": False, "lower_f0": None, "lower_ratio": None,
+             "upper_f0": None}
     if not cands:
-        return {"has_pair": False, "lower_f0": None, "lower_ratio": None,
-                "upper_f0": None, "ratio": None}
+        return empty
     best = cands[0]
     lower = None
     best_ratio = 0.0
     for c in cands[1:]:
         if c.f0 <= 0:
             continue
-        # c an octave below best?
         if abs(cents(best.f0, 2.0 * c.f0)) <= cfg.octave_pair_cents:
-            # Only a *missing-fundamental* lower reading is a genuine octave
-            # ambiguity: the lower candidate must be viable and must NOT have
-            # its own fundamental, otherwise it is a real sub-octave tone.
+            # A sub-octave reading is a genuine spectral alias when it is the
+            # missing-fundamental kind: it explains the strong peaks using only
+            # *even* harmonics of the proposed lower f0, with the lower
+            # fundamental and odd multiples absent.  That is spectrally
+            # identical to the upper reading, which is exactly why the octave
+            # cannot be settled from one frame.
             if not c.viable or c.fundamental_present:
                 continue
             ratio = c.score / best.score if best.score > 1e-9 else 0.0

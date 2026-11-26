@@ -37,6 +37,8 @@ class AnalysisConfig:
     candidate_score_ratio: float = 0.18  # keep candidates above this * best
     cluster_cents: float = 30.0    # hypotheses closer than this are merged
     octave_pair_cents: float = 45.0  # |cents(hi, 2*lo)| under this = octave pair
+    viable_promotion_margin: float = 0.85  # promote a viable candidate over
+                                          # a non-viable leader within this score ratio
 
     # --- harmonic comb scoring ------------------------------------------
     harmonic_weight_power: float = 1.0   # w_k = 1 / k**power

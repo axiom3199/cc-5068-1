@@ -1,0 +1,87 @@
+{
+ "case": "two_take_b",
+ "entries": [
+  {
+   "n_edits": 1,
+   "records": [
+    {
+     "kind": "pitch_error",
+     "kernel_midi": 79.0,
+     "user_midi": 80.0,
+     "delta_cents": 100.42,
+     "t_range": [
+      1.358,
+      2.821
+     ],
+     "evidence": {
+      "ambiguous_octave": true,
+      "admission_reasons": []
+     },
+     "suggestion": "refine f0 weighting or peak tolerance near this frame"
+    }
+   ],
+   "score_note_count": 2
+  },
+  {
+   "n_edits": 2,
+   "records": [
+    {
+     "kind": "pitch_error",
+     "kernel_midi": 79.0,
+     "user_midi": 81.0,
+     "delta_cents": 200.42,
+     "t_range": [
+      1.358,
+      2.821
+     ],
+     "evidence": {
+      "ambiguous_octave": true,
+      "admission_reasons": []
+     },
+     "suggestion": "refine f0 weighting or peak tolerance near this frame"
+    }
+   ],
+   "score_note_count": 2
+  },
+  {
+   "n_edits": 3,
+   "records": [
+    {
+     "kind": "spurious_note",
+     "kernel_midi": 79.0,
+     "t_range": [
+      1.358,
+      2.821
+     ],
+     "evidence": {
+      "ambiguous_octave": true,
+      "admission_reasons": [],
+      "kernel_confidence": 1.0
+     },
+     "suggestion": "raise confidence_min or require more sustain here"
+    }
+   ],
+   "score_note_count": 1
+  }
+ ],
+ "last": {
+  "n_edits": 3,
+  "records": [
+   {
+    "kind": "spurious_note",
+    "kernel_midi": 79.0,
+    "t_range": [
+     1.358,
+     2.821
+    ],
+    "evidence": {
+     "ambiguous_octave": true,
+     "admission_reasons": [],
+     "kernel_confidence": 1.0
+    },
+    "suggestion": "raise confidence_min or require more sustain here"
+   }
+  ],
+  "score_note_count": 1
+ }
+}

@@ -270,6 +270,15 @@ def track_and_segment(frames: list[Frame], cfg: AnalysisConfig,
             g.append(j)
             j += 1
 
+    # Bridging can make adjacent groups overlap; merge any that now do so.
+    merged: list[list[int]] = []
+    for g in sorted(groups, key=lambda z: z[0]):
+        if merged and g[0] <= merged[-1][-1]:
+            merged[-1].extend(k for k in g if k > merged[-1][-1])
+        else:
+            merged.append(sorted(set(g)))
+    groups = merged
+
     for g in groups:
         lo_i, hi_i = g[0], g[-1]
         low_vals = [frames[i].lower_octave_f0 for i in g

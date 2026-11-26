@@ -18,6 +18,7 @@
   "candidate_score_ratio": 0.18,
   "cluster_cents": 30.0,
   "octave_pair_cents": 45.0,
+  "viable_promotion_margin": 0.85,
   "harmonic_weight_power": 1.0,
   "match_tolerance_cents": 70.0,
   "match_tolerance_min_hz": 8.0,
@@ -78742,8 +78743,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 782.809,
     "lower_ratio": null
    },
    "attack": {
@@ -79489,8 +79490,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 782.137,
     "lower_ratio": null
    },
    "attack": {
@@ -90509,8 +90510,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 783.002,
     "lower_ratio": null
    },
    "attack": {
@@ -91197,8 +91198,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 782.282,
     "lower_ratio": null
    },
    "attack": {
@@ -91950,8 +91951,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 781.788,
     "lower_ratio": null
    },
    "attack": {
@@ -92545,8 +92546,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 781.581,
     "lower_ratio": null
    },
    "attack": {
@@ -93289,8 +93290,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 781.692,
     "lower_ratio": null
    },
    "attack": {
@@ -94817,8 +94818,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 782.771,
     "lower_ratio": null
    },
    "attack": {
@@ -95555,8 +95556,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 783.602,
     "lower_ratio": null
    },
    "attack": {
@@ -96350,8 +96351,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 784.483,
     "lower_ratio": null
    },
    "attack": {
@@ -97134,8 +97135,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 785.299,
     "lower_ratio": null
    },
    "attack": {
@@ -106356,8 +106357,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 782.603,
     "lower_ratio": null
    },
    "attack": {
@@ -106932,8 +106933,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 783.406,
     "lower_ratio": null
    },
    "attack": {
@@ -109156,8 +109157,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 785.819,
     "lower_ratio": null
    },
    "attack": {
@@ -109737,8 +109738,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 786.276,
     "lower_ratio": null
    },
    "attack": {
@@ -110308,8 +110309,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 786.434,
     "lower_ratio": null
    },
    "attack": {
@@ -111026,8 +111027,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 786.272,
     "lower_ratio": null
    },
    "attack": {
@@ -111787,8 +111788,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 785.812,
     "lower_ratio": null
    },
    "attack": {
@@ -112402,8 +112403,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 785.112,
     "lower_ratio": null
    },
    "attack": {
@@ -123089,8 +123090,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 785.279,
     "lower_ratio": null
    },
    "attack": {
@@ -123893,8 +123894,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 784.459,
     "lower_ratio": null
    },
    "attack": {
@@ -124484,8 +124485,8 @@
    "rejection_summary": {},
    "octave": {
     "ambiguous": false,
-    "lower_f0_hz": 391.889,
-    "upper_f0_hz": 783.855,
+    "lower_f0_hz": null,
+    "upper_f0_hz": 783.579,
     "lower_ratio": null
    },
    "attack": {
@@ -154102,17 +154103,6 @@
    "resolved": true,
    "resolution": "no_later_evidence_keep_upper",
    "chosen_f0_hz": 783.855
-  },
-  {
-   "start_index": 117,
-   "end_index": 235,
-   "start_time": 1.4048,
-   "deadline_time": 2.0048,
-   "lower_f0_hz": 391.889,
-   "upper_f0_hz": 783.855,
-   "resolved": true,
-   "resolution": "no_later_evidence_keep_upper",
-   "chosen_f0_hz": 783.855
   }
  ],
  "revisions": [],
@@ -154126,7 +154116,7 @@
   "silence_frames": 28,
   "relabelled_frames": 0,
   "n_notes": 4,
-  "n_deferrals": 3,
+  "n_deferrals": 2,
   "n_revisions": 0,
   "valid_coverage": 0.8823529411764706
  },
