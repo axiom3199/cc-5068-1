@@ -1,0 +1,1812 @@
+{
+ "phrase": "phrase_breathy",
+ "sample_rate": 22050,
+ "duration": 2.9,
+ "description": "Breathy pitched phrase with unvoiced aspiration gaps for voicing/cent verification.",
+ "pitch_status_legend": {
+  "known": "f0 directly evidenced by the spectrum (e.g. open string)",
+  "candidate": "missing-fundamental texture; only an octave candidate range is justified, no definite octave without evidence"
+ },
+ "segments": [
+  {
+   "t0": 0.0,
+   "t1": 0.25,
+   "kind": "breath",
+   "f0": null,
+   "label": "unvoiced gap"
+  },
+  {
+   "t0": 0.25,
+   "t1": 1.35,
+   "kind": "tone",
+   "f0": 293.6647679174076,
+   "midi": 62.0,
+   "pitch_status": "known",
+   "timbre": "breathy",
+   "label": "breathy D4 (weak partials, strong aspiration)",
+   "open_string": false,
+   "ambiguous": false,
+   "vibrato_hz": 5.0,
+   "vibrato_cents": 12.0,
+   "vibrato_delay": 0.15
+  },
+  {
+   "t0": 1.35,
+   "t1": 1.55,
+   "kind": "breath",
+   "f0": null,
+   "label": "unvoiced gap"
+  },
+  {
+   "t0": 1.55,
+   "t1": 2.6,
+   "kind": "tone",
+   "f0": 261.6255653005986,
+   "midi": 60.0,
+   "pitch_status": "known",
+   "timbre": "breathy",
+   "label": "breathy C4",
+   "open_string": false,
+   "ambiguous": false,
+   "vibrato_hz": 4.5,
+   "vibrato_cents": 10.0,
+   "vibrato_delay": 0.15
+  },
+  {
+   "t0": 2.6,
+   "t1": 2.9,
+   "kind": "breath",
+   "f0": null,
+   "label": "unvoiced gap"
+  }
+ ],
+ "f0_trajectory": [
+  {
+   "t": 0.0,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.01,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.02,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.03,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.04,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.05,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.06,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.07,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.08,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.09,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.1,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.11,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.12,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.13,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.14,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.15,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.16,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.17,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.18,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.19,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.2,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.21,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.22,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.23,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.24,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 0.25,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.26,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.27,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.28,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.29,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.3,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.31,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.32,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.33,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.34,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.35,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.36,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.37,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.38,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.39,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.4,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.41,
+   "f0_hz": 293.7276759616191,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.42,
+   "f0_hz": 293.90415622846473,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.43,
+   "f0_hz": 294.1592169879174,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.44,
+   "f0_hz": 294.4401510378831,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.45,
+   "f0_hz": 294.6842981377183,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.46,
+   "f0_hz": 294.82860999695987,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.47,
+   "f0_hz": 294.8197776784659,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.48,
+   "f0_hz": 294.6234926589243,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.49,
+   "f0_hz": 294.23142569334203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.5,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.51,
+   "f0_hz": 293.03642801981914,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.52,
+   "f0_hz": 292.4707479556534,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.53,
+   "f0_hz": 292.02259899701016,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.54,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.55,
+   "f0_hz": 291.6362771930363,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.56,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.57,
+   "f0_hz": 292.02259899701016,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.58,
+   "f0_hz": 292.4707479556534,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.59,
+   "f0_hz": 293.03642801981914,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.6,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.61,
+   "f0_hz": 294.29445512539553,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.62,
+   "f0_hz": 294.86366249885975,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.63,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.64,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.65,
+   "f0_hz": 295.70736791055185,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.66,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.67,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.68,
+   "f0_hz": 294.8636624988597,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.69,
+   "f0_hz": 294.2944551253955,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.7,
+   "f0_hz": 293.6647679174075,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.71,
+   "f0_hz": 293.03642801981914,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.72,
+   "f0_hz": 292.4707479556534,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.73,
+   "f0_hz": 292.0225989970101,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.74,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.75,
+   "f0_hz": 291.6362771930363,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.76,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.77,
+   "f0_hz": 292.02259899701016,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.78,
+   "f0_hz": 292.4707479556534,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.79,
+   "f0_hz": 293.03642801981914,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.8,
+   "f0_hz": 293.6647679174076,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.81,
+   "f0_hz": 294.29445512539553,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.82,
+   "f0_hz": 294.86366249885975,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.83,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.84,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.85,
+   "f0_hz": 295.70736791055185,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.86,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.87,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.88,
+   "f0_hz": 294.8636624988597,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.89,
+   "f0_hz": 294.2944551253955,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.9,
+   "f0_hz": 293.6647679174075,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.91,
+   "f0_hz": 293.03642801981914,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.92,
+   "f0_hz": 292.4707479556534,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.93,
+   "f0_hz": 292.0225989970101,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.94,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.95,
+   "f0_hz": 291.6362771930363,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.96,
+   "f0_hz": 291.73523169435515,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.97,
+   "f0_hz": 292.02259899701016,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.98,
+   "f0_hz": 292.47074795565345,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 0.99,
+   "f0_hz": 293.0364280198192,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.0,
+   "f0_hz": 293.66476791740763,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.01,
+   "f0_hz": 294.29445512539553,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.02,
+   "f0_hz": 294.86366249885975,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.03,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.04,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.05,
+   "f0_hz": 295.70736791055185,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.06,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.07,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.08,
+   "f0_hz": 294.8636624988597,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.09,
+   "f0_hz": 294.2944551253955,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.1,
+   "f0_hz": 293.6647679174075,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.11,
+   "f0_hz": 293.0364280198191,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.12,
+   "f0_hz": 292.4707479556534,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.13,
+   "f0_hz": 292.0225989970101,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.14,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.15,
+   "f0_hz": 291.6362771930363,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.16,
+   "f0_hz": 291.73523169435515,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.17,
+   "f0_hz": 292.02259899701016,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.18,
+   "f0_hz": 292.47074795565345,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.19,
+   "f0_hz": 293.0364280198192,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.2,
+   "f0_hz": 293.66476791740763,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.21,
+   "f0_hz": 294.29445512539553,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.22,
+   "f0_hz": 294.86366249885975,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.23,
+   "f0_hz": 295.3161714613321,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.24,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.25,
+   "f0_hz": 295.70736791055185,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.26,
+   "f0_hz": 295.6070660890751,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.27,
+   "f0_hz": 295.31617146133203,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.28,
+   "f0_hz": 294.8636624988597,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.29,
+   "f0_hz": 294.2944551253955,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.3,
+   "f0_hz": 293.6647679174075,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.31,
+   "f0_hz": 293.0364280198191,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.32,
+   "f0_hz": 292.47074795565334,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.33,
+   "f0_hz": 292.0225989970101,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.34,
+   "f0_hz": 291.7352316943551,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.35,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.36,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.37,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.38,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.39,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.4,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.41,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.42,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.43,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.44,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.45,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.46,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.47,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.48,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.49,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.5,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.51,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.52,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.53,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.54,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 1.55,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.56,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.57,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.58,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.59,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.6,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.61,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.62,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.63,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.64,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.65,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.66,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.67,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.68,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.69,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.7,
+   "f0_hz": 261.6255653005986,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.71,
+   "f0_hz": 261.66773007174027,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.72,
+   "f0_hz": 261.7875646391984,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.73,
+   "f0_hz": 261.9658586895929,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.74,
+   "f0_hz": 262.1730903695891,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.75,
+   "f0_hz": 262.37293226677025,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.76,
+   "f0_hz": 262.526688944356,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.77,
+   "f0_hz": 262.5982118679448,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.78,
+   "f0_hz": 262.5587505751531,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.79,
+   "f0_hz": 262.391165990069,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.8,
+   "f0_hz": 262.09297144144074,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.81,
+   "f0_hz": 261.67303781395435,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.82,
+   "f0_hz": 261.25001282623697,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.83,
+   "f0_hz": 260.85742741986434,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.84,
+   "f0_hz": 260.52625774142166,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.85,
+   "f0_hz": 260.2825276862822,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.86,
+   "f0_hz": 260.1453277747989,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.87,
+   "f0_hz": 260.1253811800593,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.88,
+   "f0_hz": 260.2242454812078,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.89,
+   "f0_hz": 260.4341971485047,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.9,
+   "f0_hz": 260.7388054235663,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.91,
+   "f0_hz": 261.11416214367745,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.92,
+   "f0_hz": 261.53069293799865,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.93,
+   "f0_hz": 261.95543300697324,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.94,
+   "f0_hz": 262.35460945147025,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.95,
+   "f0_hz": 262.69633634093645,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.96,
+   "f0_hz": 262.95320467755204,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.97,
+   "f0_hz": 263.1045437006611,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.98,
+   "f0_hz": 263.1381474998073,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 1.99,
+   "f0_hz": 263.05130308740064,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.0,
+   "f0_hz": 262.8510197633872,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.01,
+   "f0_hz": 262.55343716344765,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.02,
+   "f0_hz": 262.1824701459911,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.03,
+   "f0_hz": 261.7678212469385,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.04,
+   "f0_hz": 261.3425462520901,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.05,
+   "f0_hz": 260.94038976566026,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.06,
+   "f0_hz": 260.59311443037336,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.07,
+   "f0_hz": 260.32803284721587,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.08,
+   "f0_hz": 260.16592115434617,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.09,
+   "f0_hz": 260.11945432235143,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.1,
+   "f0_hz": 260.19226113144003,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.11,
+   "f0_hz": 260.3786549555078,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.12,
+   "f0_hz": 260.6640559130092,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.13,
+   "f0_hz": 261.0260799002508,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.14,
+   "f0_hz": 261.43622919312674,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.15,
+   "f0_hz": 261.8620772378141,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.16,
+   "f0_hz": 262.2697984836584,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.17,
+   "f0_hz": 262.62685662126694,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.18,
+   "f0_hz": 262.90463735987566,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.19,
+   "f0_hz": 263.0808015793228,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.2,
+   "f0_hz": 263.1411467822288,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.21,
+   "f0_hz": 263.08080157932284,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.22,
+   "f0_hz": 262.90463735987584,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.23,
+   "f0_hz": 262.62685662126717,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.24,
+   "f0_hz": 262.26979848365863,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.25,
+   "f0_hz": 261.8620772378144,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.26,
+   "f0_hz": 261.43622919312696,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.27,
+   "f0_hz": 261.02607990025103,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.28,
+   "f0_hz": 260.66405591300935,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.29,
+   "f0_hz": 260.37865495550795,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.3,
+   "f0_hz": 260.19226113144015,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.31,
+   "f0_hz": 260.11945432235143,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.32,
+   "f0_hz": 260.1659211543461,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.33,
+   "f0_hz": 260.32803284721575,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.34,
+   "f0_hz": 260.5931144303732,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.35,
+   "f0_hz": 260.94038976566003,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.36,
+   "f0_hz": 261.34254625208985,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.37,
+   "f0_hz": 261.76782124693824,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.38,
+   "f0_hz": 262.18247014599086,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.39,
+   "f0_hz": 262.5534371634474,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.4,
+   "f0_hz": 262.8510197633871,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.41,
+   "f0_hz": 263.0513030874006,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.42,
+   "f0_hz": 263.1381474998073,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.43,
+   "f0_hz": 263.10454370066117,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.44,
+   "f0_hz": 262.9532046775522,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.45,
+   "f0_hz": 262.6963363409367,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.46,
+   "f0_hz": 262.35460945147054,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.47,
+   "f0_hz": 261.9554330069736,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.48,
+   "f0_hz": 261.530692937999,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.49,
+   "f0_hz": 261.11416214367773,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.5,
+   "f0_hz": 260.7388054235666,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.51,
+   "f0_hz": 260.4341971485049,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.52,
+   "f0_hz": 260.22424548120796,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.53,
+   "f0_hz": 260.1253811800594,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.54,
+   "f0_hz": 260.14532777479883,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.55,
+   "f0_hz": 260.282527686282,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.56,
+   "f0_hz": 260.5262577414214,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.57,
+   "f0_hz": 260.85742741986394,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.58,
+   "f0_hz": 261.25001282623657,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.59,
+   "f0_hz": 261.6730378139539,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.6,
+   "f0_hz": 262.09297144144034,
+   "voiced": true,
+   "pitch_status": "known"
+  },
+  {
+   "t": 2.61,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.62,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.63,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.64,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.65,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.66,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.67,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.68,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.69,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.7,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.71,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.72,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.73,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.74,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.75,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.76,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.77,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.78,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.79,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.8,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.81,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.82,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.83,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.84,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.85,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.86,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.87,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.88,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.89,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  },
+  {
+   "t": 2.9,
+   "f0_hz": null,
+   "voiced": false,
+   "pitch_status": null
+  }
+ ],
+ "open_string_anchors": []
+}

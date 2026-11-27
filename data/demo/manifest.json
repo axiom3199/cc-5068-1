@@ -1,0 +1,50 @@
+{
+ "cases": {
+  "phrase_anchor": {
+   "audio": "data/demo/audio/phrase_anchor.wav",
+   "truth": "data/demo/truth/phrase_anchor.json",
+   "track": "data/demo/tracks/phrase_anchor.json",
+   "tab": "data/demo/tab/phrase_anchor.json",
+   "verify": "data/demo/verify/phrase_anchor.json",
+   "duration_s": 4.249977324263039,
+   "demo": true
+  },
+  "phrase_anchor_no_anchor": {
+   "audio": "data/demo/audio/phrase_anchor_no_anchor.wav",
+   "truth": "data/demo/truth/phrase_anchor_no_anchor.json",
+   "track": "data/demo/tracks/phrase_anchor_no_anchor.json",
+   "tab": "data/demo/tab/phrase_anchor_no_anchor.json",
+   "verify": "data/demo/verify/phrase_anchor_no_anchor.json",
+   "duration_s": 4.249977324263039,
+   "demo": true
+  },
+  "pair_f3_full": {
+   "audio": "data/demo/audio/pair_f3_full.wav",
+   "truth": "data/demo/truth/pair_f3_full.json",
+   "track": "data/demo/tracks/pair_f3_full.json",
+   "tab": "data/demo/tab/pair_f3_full.json",
+   "verify": "data/demo/verify/pair_f3_full.json",
+   "duration_s": 2.7,
+   "demo": true
+  },
+  "pair_f3_even": {
+   "audio": "data/demo/audio/pair_f3_even.wav",
+   "truth": "data/demo/truth/pair_f3_even.json",
+   "track": "data/demo/tracks/pair_f3_even.json",
+   "tab": "data/demo/tab/pair_f3_even.json",
+   "verify": "data/demo/verify/pair_f3_even.json",
+   "duration_s": 2.7,
+   "demo": true
+  },
+  "phrase_breathy": {
+   "audio": "data/demo/audio/phrase_breathy.wav",
+   "truth": "data/demo/truth/phrase_breathy.json",
+   "track": "data/demo/tracks/phrase_breathy.json",
+   "tab": "data/demo/tab/phrase_breathy.json",
+   "verify": "data/demo/verify/phrase_breathy.json",
+   "duration_s": 2.9,
+   "demo": true
+  }
+ },
+ "generated_at": "2026-11-27T00:45:14"
+}

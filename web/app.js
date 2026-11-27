@@ -39,6 +39,8 @@
     edits: [],
     hovering: false,
     audioCache: {},
+    tab: null,
+    tabVerify: null,
   };
 
   // ---------------------------------------------------------------------
@@ -149,6 +151,7 @@
       applyTrack(state.track, state.mode);
       await loadScore(id);
       await loadBadgesAndReport(id);
+      await loadTab(id);
       setStatus("就绪");
     } catch (e) {
       setStatus("错误: " + e.message, false);
@@ -237,6 +240,92 @@
 
   async function loadBadgesAndReport(id) {
     renderReportForCase();
+  }
+
+  // ---------------------------------------------------------------------
+  // editable fingering tablature (demo phrases only; data comes from the
+  // kernel endpoints, never from hard-coded pitch constants)
+  // ---------------------------------------------------------------------
+  async function loadTab(id) {
+    const card = $("tab-card");
+    const meta = (state.cases || []).find(c => c.id === id);
+    if (!meta || !meta.has_tab) {
+      state.tab = null;
+      state.tabVerify = null;
+      card.classList.add("hidden");
+      return;
+    }
+    try {
+      const data = await api(`/api/tab/${encodeURIComponent(id)}`);
+      state.tab = data.tab;
+      state.tabVerify = data.verify_summary;
+      card.classList.remove("hidden");
+      renderTab();
+    } catch (e) {
+      state.tab = null;
+      state.tabVerify = null;
+      card.classList.add("hidden");
+    }
+  }
+
+  function renderTab() {
+    const panel = $("tab-panel");
+    const tab = state.tab;
+    if (!tab) { panel.innerHTML = '<p class="muted">该案例无指法谱。</p>'; return; }
+    const anchors = tab.anchors || [];
+    const info = $("tab-info");
+    const v = state.tabVerify;
+    info.textContent =
+      `${tab.notes.length} 个指法位 · 空弦锚点 ${anchors.length} 个` +
+      (v ? ` · 验收 ${v.accepted ? "通过" : "未过"}（失败片段 ${v.n_failures}）` : "");
+
+    const rows = tab.notes.map((nt) => {
+      const status = nt.pitch_status === "known"
+        ? '<span class="tag viable">已知音高</span>'
+        : '<span class="tag amb">候选区间</span>';
+      const open = nt.open_string ? '<span class="tag">空弦</span>' : "";
+      let resolution;
+      if (nt.resolution === "known") {
+        resolution = `<span class="tab-res known">确定 ${nt.resolved_hz.toFixed(1)} Hz</span>`;
+      } else if (nt.resolution === "anchor_resolved") {
+        resolution = `<span class="tab-res resolved">锚点解八度 → ${nt.resolved_hz.toFixed(1)} Hz（锚 #${nt.resolution_anchor_index}）</span>`;
+      } else {
+        const lo = nt.candidate_lower_hz ? nt.candidate_lower_hz.toFixed(1) : "—";
+        const hi = nt.candidate_upper_hz ? nt.candidate_upper_hz.toFixed(1) : "—";
+        resolution = `<span class="tab-res unresolved">未决区间 [${lo}, ${hi}] Hz</span>`;
+      }
+      return `<div class="tab-row">
+        <span class="tab-idx">#${nt.index}</span>
+        <span class="tab-fret">${nt.string}弦 ${nt.fret}品</span>
+        ${status}${open}
+        ${resolution}
+        <span class="muted tab-label">${nt.label || ""}</span>
+      </div>`;
+    }).join("");
+    panel.innerHTML = `<div class="tab-head muted">
+        定弦 ${tab.tuning_hz.map(x => x.toFixed(1)).join(" / ")} Hz
+      </div>${rows}`;
+  }
+
+  async function resolveTabOctaves() {
+    if (!state.caseId || !state.tab) return;
+    const btn = $("btn-tab-resolve");
+    btn.disabled = true; btn.textContent = "解析中…";
+    try {
+      const res = await api("/api/tab/resolve", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: state.caseId }),
+      });
+      state.tab = res.tab;
+      renderTab();
+      const refused = (res.verdicts || []).filter(x => !x.resolved);
+      setStatus(`八度解析：确定 ${res.n_resolved} 个，拒绝 ${res.n_refused} 个` +
+        (refused.length ? "（无空弦佐证，候选区间保持未决）" : ""));
+    } catch (e) {
+      setStatus("八度解析失败: " + e.message, false);
+    } finally {
+      btn.disabled = false; btn.textContent = "依空弦证据解八度";
+    }
   }
 
   // ---------------------------------------------------------------------
@@ -1081,6 +1170,9 @@
         renderFeedback(recs);
       } catch (e) { box.textContent = "无反馈记录"; box.classList.remove("hidden"); }
     });
+
+    const tabBtn = $("btn-tab-resolve");
+    if (tabBtn) tabBtn.addEventListener("click", resolveTabOctaves);
 
     window.addEventListener("resize", () => {
       drawWave(); drawTrack(); drawSpectrum(); drawStaff();

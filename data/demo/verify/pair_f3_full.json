@@ -1,0 +1,31 @@
+{
+ "accepted": true,
+ "tolerances": {
+  "abs_mean_cents": 5.0,
+  "p95_abs_cents": 25.0,
+  "octave_error_rate": 0.0,
+  "unvoiced_spurious_rate": 0.0,
+  "candidate_undecided_rate": 0.9
+ },
+ "cent_stats": {
+  "n_scored_known_frames": 185,
+  "mean_cents": 0.1580156829471551,
+  "abs_mean_cents": 1.7859372550023416,
+  "p95_abs_cents": 3.642489265188044,
+  "max_abs_cents": 6.568149048662213,
+  "octave_errors": 0,
+  "octave_error_rate": 0.0
+ },
+ "voicing": {
+  "unvoiced_frames": 0,
+  "unvoiced_spurious": 0,
+  "unvoiced_spurious_rate": 0.0
+ },
+ "ambiguity": {
+  "candidate_frames": 0,
+  "candidate_undecided": 0,
+  "candidate_undecided_rate": 1.0
+ },
+ "n_failures": 0,
+ "failures": []
+}

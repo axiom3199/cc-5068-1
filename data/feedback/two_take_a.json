@@ -113,6 +113,72 @@
     }
    ],
    "score_note_count": 1
+  },
+  {
+   "n_edits": 1,
+   "records": [
+    {
+     "kind": "octave_failure",
+     "kernel_midi": 55.0,
+     "user_midi": 67.0,
+     "octaves_corrected": 1,
+     "t_range": [
+      0.128,
+      2.821
+     ],
+     "evidence": {
+      "ambiguous_octave": true,
+      "admission_reasons": [],
+      "kernel_octave_corrected": true
+     },
+     "suggestion": "kernel kept the wrong octave; strengthen the temporal/attack evidence or the sub-octave score margin"
+    }
+   ],
+   "score_note_count": 1
+  },
+  {
+   "n_edits": 1,
+   "records": [
+    {
+     "kind": "octave_failure",
+     "kernel_midi": 55.0,
+     "user_midi": 67.0,
+     "octaves_corrected": 1,
+     "t_range": [
+      0.128,
+      2.821
+     ],
+     "evidence": {
+      "ambiguous_octave": true,
+      "admission_reasons": [],
+      "kernel_octave_corrected": true
+     },
+     "suggestion": "kernel kept the wrong octave; strengthen the temporal/attack evidence or the sub-octave score margin"
+    }
+   ],
+   "score_note_count": 1
+  },
+  {
+   "n_edits": 1,
+   "records": [
+    {
+     "kind": "octave_failure",
+     "kernel_midi": 55.0,
+     "user_midi": 67.0,
+     "octaves_corrected": 1,
+     "t_range": [
+      0.128,
+      2.821
+     ],
+     "evidence": {
+      "ambiguous_octave": true,
+      "admission_reasons": [],
+      "kernel_octave_corrected": true
+     },
+     "suggestion": "kernel kept the wrong octave; strengthen the temporal/attack evidence or the sub-octave score margin"
+    }
+   ],
+   "score_note_count": 1
   }
  ],
  "last": {

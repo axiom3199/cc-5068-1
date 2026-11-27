@@ -1,0 +1,35 @@
+{
+ "name": "pair_f3_even",
+ "sample_rate": 22050,
+ "duration": 2.7,
+ "description": "Material pair take B: missing fundamental.",
+ "seed": 3102,
+ "unvoiced": [],
+ "notes": [
+  {
+   "f0_hz": 174.61,
+   "t0": 0.25,
+   "t1": 2.4,
+   "timbre": "even",
+   "vibrato_hz": 5.0,
+   "vibrato_cents": 22.0,
+   "vibrato_delay": 0.2,
+   "noise_amp": 0.006,
+   "attack": 0.03,
+   "release": 0.05,
+   "pitch_status": "candidate",
+   "label": "pair_f3: fundamental absent (undecidable)",
+   "string": null,
+   "fret": null,
+   "open_string": false,
+   "midi": 53.0,
+   "harmonics": {
+    "2": 0.55,
+    "4": 0.42,
+    "6": 0.3,
+    "8": 0.17,
+    "10": 0.1
+   }
+  }
+ ]
+}

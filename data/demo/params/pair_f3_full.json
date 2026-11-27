@@ -1,0 +1,36 @@
+{
+ "name": "pair_f3_full",
+ "sample_rate": 22050,
+ "duration": 2.7,
+ "description": "Material pair take A: fundamental present.",
+ "seed": 3101,
+ "unvoiced": [],
+ "notes": [
+  {
+   "f0_hz": 174.61,
+   "t0": 0.25,
+   "t1": 2.4,
+   "timbre": "full",
+   "vibrato_hz": 5.0,
+   "vibrato_cents": 22.0,
+   "vibrato_delay": 0.2,
+   "noise_amp": 0.006,
+   "attack": 0.03,
+   "release": 0.05,
+   "pitch_status": "known",
+   "label": "pair_f3: fundamental present (decidable)",
+   "string": null,
+   "fret": null,
+   "open_string": false,
+   "midi": 53.0,
+   "harmonics": {
+    "1": 0.5,
+    "2": 0.42,
+    "3": 0.3,
+    "4": 0.22,
+    "5": 0.14,
+    "6": 0.1
+   }
+  }
+ ]
+}

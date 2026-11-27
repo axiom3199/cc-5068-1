@@ -32,6 +32,7 @@ from intonation import wavio, accompaniment, score as score_mod, feedback  # noq
 from intonation.analysis import analyze_signal  # noqa: E402
 from intonation.streaming import stream_analyze  # noqa: E402
 from intonation.config import AnalysisConfig, StreamingConfig  # noqa: E402
+from intonation import tablature as tab_mod  # noqa: E402
 
 DATA = os.path.join(ROOT, "data")
 AUDIO_DIR = os.path.join(DATA, "audio")
@@ -40,6 +41,7 @@ TRUTH_DIR = os.path.join(DATA, "truth")
 UPLOAD_DIR = os.path.join(DATA, "uploads")
 EXPORT_DIR = os.path.join(DATA, "exports")
 FEEDBACK_DIR = os.path.join(DATA, "feedback")
+DEMO_DIR = os.path.join(DATA, "demo")
 WEB_DIR = os.path.join(ROOT, "web")
 
 _CACHE_LOCK = threading.Lock()
@@ -78,22 +80,37 @@ def list_cases() -> list[dict]:
     man = _manifest()
     cases = []
     for name, meta in man.get("cases", {}).items():
+        is_demo = bool(meta.get("demo"))
         cases.append({
             "id": name, "name": name,
             "duration_s": meta.get("duration_s"),
-            "kind": _truth_kind(name),
+            "kind": ("demo_" + _demo_subkind(name)) if is_demo
+                    else _truth_kind(name),
             "audio_url": f"/api/audio/{name}",
-            "has_truth": os.path.exists(os.path.join(TRUTH_DIR, f"{name}.json")),
-            "source": "dataset",
+            "has_truth": os.path.exists(os.path.join(TRUTH_DIR, f"{name}.json"))
+                         or _demo_path(name, "truth") is not None,
+            "has_tab": _demo_path(name, "tab") is not None,
+            "source": "demo" if is_demo else "dataset",
         })
     with _CACHE_LOCK:
         for uid, up in _UPLOADS.items():
             cases.append({
                 "id": uid, "name": up["name"], "duration_s": up["duration_s"],
                 "kind": "upload", "audio_url": f"/api/audio/{uid}",
-                "has_truth": False, "source": "upload",
+                "has_truth": False, "has_tab": False, "source": "upload",
             })
-    return sorted(cases, key=lambda c: (c["source"] != "upload", c["id"]))
+    return sorted(cases, key=lambda c: (c["source"] == "upload",
+                                        c["source"] != "demo", c["id"]))
+
+
+def _demo_subkind(name: str) -> str:
+    if name.startswith("pair_"):
+        return "pair"
+    if "breathy" in name:
+        return "breathy"
+    if "no_anchor" in name:
+        return "anchor_no_anchor"
+    return "anchor"
 
 
 def resolve_audio(case_id: str) -> tuple[np.ndarray, int] | None:
@@ -101,6 +118,9 @@ def resolve_audio(case_id: str) -> tuple[np.ndarray, int] | None:
         if case_id in _UPLOADS:
             path = _UPLOADS[case_id]["path"]
             return wavio.read_wav(path)
+    demo = resolve_demo_audio(case_id)
+    if demo is not None:
+        return demo
     path = os.path.join(AUDIO_DIR, f"{case_id}.wav")
     if os.path.exists(path):
         return wavio.read_wav(path)
@@ -111,6 +131,9 @@ def _audio_path(case_id: str) -> str | None:
     with _CACHE_LOCK:
         if case_id in _UPLOADS:
             return _UPLOADS[case_id]["path"]
+    p = os.path.join(DEMO_DIR, "audio", f"{case_id}.wav")
+    if os.path.exists(p):
+        return p
     p = os.path.join(AUDIO_DIR, f"{case_id}.wav")
     return p if os.path.exists(p) else None
 
@@ -126,6 +149,37 @@ def get_truth(case_id: str) -> dict | None:
         return None
 
 
+def _demo_path(case_id: str, sub: str) -> str | None:
+    """Return a checked-in demo artifact path for a demo case, else None."""
+    p = os.path.join(DEMO_DIR, sub, f"{case_id}.json")
+    return p if os.path.exists(p) else None
+
+
+def get_demo_tab(case_id: str) -> dict | None:
+    """Load the editable tablature for a demo phrase (checked-in artifact)."""
+    p = _demo_path(case_id, "tab")
+    if p is None:
+        return None
+    with open(p) as f:
+        return json.load(f)
+
+
+def get_demo_verify(case_id: str) -> dict | None:
+    p = _demo_path(case_id, "verify")
+    if p is None:
+        return None
+    with open(p) as f:
+        return json.load(f)
+
+
+def resolve_demo_audio(case_id: str) -> tuple[np.ndarray, int] | None:
+    """Demo audio lives under data/demo/audio (separate from kernel fixtures)."""
+    p = os.path.join(DEMO_DIR, "audio", f"{case_id}.wav")
+    if os.path.exists(p):
+        return wavio.read_wav(p)
+    return None
+
+
 def get_track(case_id: str, fresh: bool = False, allow_revision: bool = True) -> dict | None:
     """Return an offline track: cached if fresh, else from disk / on-demand."""
     cache_key = f"{case_id}:rev={allow_revision}"
@@ -133,11 +187,13 @@ def get_track(case_id: str, fresh: bool = False, allow_revision: bool = True) ->
         if not fresh and cache_key in _TRACK_CACHE:
             return _TRACK_CACHE[cache_key]
     if not fresh and allow_revision:
-        disk = os.path.join(TRACK_DIR, f"{case_id}.json")
+        demo_track = _demo_path(case_id, "tracks")
+        disk = demo_track or os.path.join(TRACK_DIR, f"{case_id}.json")
         if os.path.exists(disk):
             with open(disk) as f:
                 tr = json.load(f)
             tr["mode"] = "offline"
+            tr["demo"] = True
             with _CACHE_LOCK:
                 _TRACK_CACHE[cache_key] = tr
             return tr
@@ -304,6 +360,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self._get_truth(path[len("/api/truth/"):])
             if path.startswith("/api/feedback/"):
                 return self._get_feedback(path[len("/api/feedback/"):])
+            if path.startswith("/api/tab/"):
+                return self._get_tab(path[len("/api/tab/"):])
+            if path.startswith("/api/verify/"):
+                return self._get_verify(path[len("/api/verify/"):])
             if path.startswith("/api/export/"):
                 return self._get_export(path)
             return self._err("not found", 404)
@@ -326,6 +386,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self._post_score()
             if path == "/api/score/edit":
                 return self._post_score_edit()
+            if path == "/api/tab/resolve":
+                return self._post_tab_resolve()
+            if path == "/api/tab/fingering":
+                return self._post_tab_fingering()
             return self._err("not found", 404)
         except Exception as e:  # pragma: no cover - defensive
             import traceback
@@ -465,6 +529,64 @@ class Handler(BaseHTTPRequestHandler):
             return self._json({"case": case_id, "entries": [], "last": None})
         with open(p) as f:
             return self._json(json.load(f))
+
+    def _get_tab(self, case_id: str):
+        case_id = case_id.strip("/")
+        tab = get_demo_tab(case_id)
+        if tab is None:
+            return self._err("no tablature for case (not a demo phrase)", 404)
+        verify = get_demo_verify(case_id)
+        return self._json({"tab": tab,
+                           "verify_summary": None if verify is None else
+                           {"accepted": verify["accepted"],
+                            "n_failures": verify["n_failures"],
+                            "cent_stats": verify["cent_stats"],
+                            "voicing": verify["voicing"],
+                            "ambiguity": verify["ambiguity"]}})
+
+    def _get_verify(self, case_id: str):
+        case_id = case_id.strip("/")
+        verify = get_demo_verify(case_id)
+        if verify is None:
+            return self._err("no verification record for case", 404)
+        return self._json(verify)
+
+    def _post_tab_resolve(self):
+        """Resolve candidate octaves via the real tablature implementation.
+
+        No fixed pitch data is returned: the result is recomputed by
+        :func:`intonation.tablature.resolve_octaves` from the checked-in tab
+        each call, and unjustified resolutions come back refused.
+        """
+        body = self._read_json()
+        case_id = body.get("id")
+        tab = get_demo_tab(case_id)
+        if tab is None:
+            return self._err("no tablature for case (not a demo phrase)", 404)
+        indices = body.get("indices")
+        resolved = tab_mod.resolve_octaves(tab, indices)
+        refused = [v for v in resolved["verdicts"] if not v["resolved"]]
+        return self._json({
+            "tab": resolved,
+            "verdicts": resolved["verdicts"],
+            "n_resolved": sum(1 for v in resolved["verdicts"] if v["resolved"]),
+            "n_refused": len(refused),
+            "definite_pitches": tab_mod.definite_pitches(resolved),
+        })
+
+    def _post_tab_fingering(self):
+        body = self._read_json()
+        case_id = body.get("id")
+        tab = get_demo_tab(case_id)
+        if tab is None:
+            return self._err("no tablature for case (not a demo phrase)", 404)
+        try:
+            updated = tab_mod.apply_fingering_edit(
+                tab, int(body["index"]), int(body["string"]), int(body["fret"]))
+        except (KeyError, IndexError, ValueError) as e:
+            return self._err(f"bad fingering edit: {e}", 400)
+        return self._json({"tab": updated,
+                           "definite_pitches": tab_mod.definite_pitches(updated)})
 
     def _get_export(self, path: str):
         # /api/export/<case>/<fmt>

@@ -113,6 +113,19 @@
     </div>
     <div id="report" class="report"><p class="muted">载入数据后显示。</p></div>
   </section>
+
+  <!-- editable fingering tablature (demo phrases) -->
+  <section class="card hidden" id="tab-card">
+    <div class="viewhead">
+      <h2>可编辑指法谱（已知音高 / 候选区间）</h2>
+      <div class="score-actions">
+        <span id="tab-info" class="hint"></span>
+        <button id="btn-tab-resolve" class="btn small">依空弦证据解八度</button>
+      </div>
+    </div>
+    <div id="tab-panel" class="tab-panel"><p class="muted">载入演示乐句后显示。</p></div>
+    <p class="hint">候选区间只有在乐句存在已知空弦锚点时才能解为确定八度；撤掉空弦佐证后解析会被拒绝，确定音高不会被伪造。</p>
+  </section>
 </main>
 
 <audio id="player"></audio>

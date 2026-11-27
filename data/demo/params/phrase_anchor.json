@@ -1,0 +1,127 @@
+{
+ "name": "phrase_anchor",
+ "sample_rate": 22050,
+ "duration": 4.25,
+ "description": "Legato phrase: first-half missing-fundamental notes have two consistent octave readings; the open G string in the second half provides the known-pitch anchor for octave resolution.",
+ "seed": 2024,
+ "unvoiced": [
+  [
+   2.0,
+   2.06,
+   "breath"
+  ],
+  [
+   2.95,
+   3.07,
+   "breath"
+  ],
+  [
+   3.95,
+   4.25,
+   "breath"
+  ]
+ ],
+ "notes": [
+  {
+   "f0_hz": 195.99771799087463,
+   "t0": 0.2,
+   "t1": 1.1,
+   "timbre": "even",
+   "vibrato_hz": 5.0,
+   "vibrato_cents": 20.0,
+   "vibrato_delay": 0.15,
+   "noise_amp": 0.006,
+   "attack": 0.03,
+   "release": 0.05,
+   "pitch_status": "candidate",
+   "label": "N1 even-only G3 (octave undecidable)",
+   "string": 3,
+   "fret": 0,
+   "open_string": false,
+   "midi": 55.0,
+   "harmonics": {
+    "2": 0.55,
+    "4": 0.42,
+    "6": 0.3,
+    "8": 0.17,
+    "10": 0.1
+   }
+  },
+  {
+   "f0_hz": 220.0,
+   "t0": 1.16,
+   "t1": 2.0,
+   "timbre": "dom2",
+   "vibrato_hz": 5.5,
+   "vibrato_cents": 18.0,
+   "vibrato_delay": 0.15,
+   "noise_amp": 0.006,
+   "attack": 0.03,
+   "release": 0.05,
+   "pitch_status": "known",
+   "label": "N2 dominant-2nd A3 (weak fundamental)",
+   "string": 2,
+   "fret": 7,
+   "open_string": false,
+   "midi": 57.0,
+   "harmonics": {
+    "1": 0.12,
+    "2": 0.6,
+    "3": 0.12,
+    "4": 0.26,
+    "5": 0.08
+   }
+  },
+  {
+   "f0_hz": 195.99771799087463,
+   "t0": 2.06,
+   "t1": 2.95,
+   "timbre": "open_string",
+   "vibrato_hz": 5.0,
+   "vibrato_cents": 25.0,
+   "vibrato_delay": 0.15,
+   "noise_amp": 0.006,
+   "attack": 0.03,
+   "release": 0.05,
+   "pitch_status": "known",
+   "label": "N3 OPEN G string: known pitch, octave anchor",
+   "string": 3,
+   "fret": 0,
+   "open_string": true,
+   "midi": 55.0,
+   "harmonics": {
+    "1": 0.62,
+    "2": 0.4,
+    "3": 0.26,
+    "4": 0.3,
+    "5": 0.16,
+    "6": 0.18
+   }
+  },
+  {
+   "f0_hz": 174.61411571650194,
+   "t0": 3.07,
+   "t1": 3.95,
+   "timbre": "even",
+   "vibrato_hz": 4.5,
+   "vibrato_cents": 15.0,
+   "vibrato_delay": 0.15,
+   "noise_amp": 0.006,
+   "attack": 0.03,
+   "release": 0.05,
+   "pitch_status": "candidate",
+   "label": "N4 even-only F3 (octave undecidable)",
+   "string": 3,
+   "fret": 10,
+   "open_string": false,
+   "midi": 53.0,
+   "harmonics": {
+    "2": 0.55,
+    "4": 0.42,
+    "6": 0.3,
+    "8": 0.17,
+    "10": 0.1
+   }
+  }
+ ]
+}

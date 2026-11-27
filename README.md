@@ -47,6 +47,41 @@ python -m venv .venv
 .venv/bin/python scripts/generate_dataset.py
 ```
 
+### 图形入口为主，命令行为辅
+
+浏览器分析窗口是主入口：上面的所有分析、试听、跟奏、五线谱回改与指法谱解八度
+都在窗口内由内核实时驱动，界面按钮不内置任何固定曲线或固定音频。命令行仅用于
+批量重建与验收演示资料（见下节），不替代图形界面。
+
+### 音准示范资料（合成乐句 + 可编辑指法谱）
+
+`data/demo/` 内的示范资料已入库，可直接在顶部下拉框选择并载入分析窗口：
+
+- `phrase_anchor`：前半句为仅偶次谐波、**暂缺基音**的候选区间（两套八度解释都
+  吻合），后半句含一根已知空弦锚点，编辑者据此才能解除八度歧义。
+- `phrase_anchor_no_anchor`：撤掉空弦佐证的同一乐句——指法谱解析必须拒绝给出
+  无依据的确定八度，候选保持未决。
+- `pair_f3_full` / `pair_f3_even`：演奏音高相同、基音有无相反的素材对，按独立
+  乐谱对齐并标出可判 / 不可判时段（`data/demo/pairs/`）。
+- `phrase_breathy`：气声段（强噪声底）与强泛音段，用于核验清浊判断。
+
+每个乐句都保存真值轨迹与可编辑参数（`truth/`、`params/`）、来源与参数记录
+（`provenance.json`）、真实分析输出（`tracks/`）、指法谱（`tab/`）、验收证据
+（`verify/`，含音分误差、清浊判断与保留的失败片段）。**真值只用于评价，从不进入
+分析算法输入**（`intonation/datamaking.py` 的分析入口只接收音频数组与采样率，
+并有回归测试监视这一点）。
+
+重建与验收命令（命令行辅助用途）：
+
+```bash
+.venv/bin/python scripts/build_demo.py build    # 重建全部示范资料并刷新清单
+.venv/bin/python scripts/build_demo.py verify   # 校验入库产物真实存在且全部通过
+.venv/bin/python scripts/build_demo.py list     # 列出示范案例与验收结论
+```
+
+`verify` 会断言每个案例的产物齐全、验收在约定容限内通过，并确认撤掉空弦的指法谱
+没有产生任何锚点解八度结论；不满足时以非零状态退出。
+
 ---
 
 ## 二、交付内容
@@ -66,12 +101,17 @@ intonation/            音准内核（DSP + 候选 + 跟踪/回改 + 流式 + �
   analysis.py          离线总入口
   evaluate.py          音分误差/八度错率/有效覆盖率/跳音延迟/颤音恢复/误报
   synth.py             合成测试数据（含缺失基音两段式场景）
+  phrases.py           示范乐句合成：已知基频/颤音/清浊变化 + 真值轨迹与可编辑参数
+  tablature.py         可编辑指法谱：空弦锚点证据门控的八度解析（无证据则拒绝）
+  datamaking.py        仅以音频运行分析器 + 音分误差/清浊验收（真值不进算法）
   wavio.py             WAV 读写与重采样
-server/app.py          HTTP 服务：静态页面 + JSON API（分析/流式/跟奏/乐谱/反馈）
+server/app.py          HTTP 服务：静态页面 + JSON API（分析/流式/跟奏/乐谱/反馈/指法谱）
 web/                  前端（index.html / style.css / app.js，原生 Canvas）
 scripts/generate_dataset.py   生成音频、真值、轨迹与评估报告
-tests/                unittest（内核 + HTTP API 全链路）
+scripts/build_demo.py         重建/验收/列出 data/demo 示范资料（命令行辅助）
+tests/                unittest（内核 + HTTP API + 示范资料全链路）
 data/                 生成产物（audio/ truth/ tracks/ results/ exports/ feedback/）
+data/demo/            入库示范资料（audio/truth/params/tracks/tab/verify/pairs + 来源记录）
 ```
 
 ---

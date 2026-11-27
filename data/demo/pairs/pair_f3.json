@@ -1,0 +1,155 @@
+{
+ "alignment": {
+  "pair_name": "pair_f3",
+  "performed_pitch_hz": 174.61,
+  "performed_midi": 53.0,
+  "independent_score": [
+   {
+    "t0": 0.0,
+    "t1": 0.25,
+    "kind": "rest"
+   },
+   {
+    "t0": 0.25,
+    "t1": 2.4,
+    "kind": "note",
+    "midi": 53.0
+   },
+   {
+    "t0": 2.4,
+    "t1": 2.7,
+    "kind": "rest"
+   }
+  ],
+  "spans": [
+   {
+    "take": "pair_f3_full",
+    "t0": 0.25,
+    "t1": 2.4,
+    "fundamental_present": true,
+    "decidability": "decidable"
+   },
+   {
+    "take": "pair_f3_even",
+    "t0": 0.25,
+    "t1": 2.4,
+    "fundamental_present": false,
+    "decidability": "undecidable",
+    "candidate_range_hz": [
+     174.61,
+     349.22
+    ]
+   }
+  ]
+ },
+ "verification": {
+  "accepted": true,
+  "alignment": {
+   "pair_name": "pair_f3",
+   "performed_pitch_hz": 174.61,
+   "performed_midi": 53.0,
+   "independent_score": [
+    {
+     "t0": 0.0,
+     "t1": 0.25,
+     "kind": "rest"
+    },
+    {
+     "t0": 0.25,
+     "t1": 2.4,
+     "kind": "note",
+     "midi": 53.0
+    },
+    {
+     "t0": 2.4,
+     "t1": 2.7,
+     "kind": "rest"
+    }
+   ],
+   "spans": [
+    {
+     "take": "pair_f3_full",
+     "t0": 0.25,
+     "t1": 2.4,
+     "fundamental_present": true,
+     "decidability": "decidable"
+    },
+    {
+     "take": "pair_f3_even",
+     "t0": 0.25,
+     "t1": 2.4,
+     "fundamental_present": false,
+     "decidability": "undecidable",
+     "candidate_range_hz": [
+      174.61,
+      349.22
+     ]
+    }
+   ]
+  },
+  "fundamental_present": {
+   "accepted": true,
+   "tolerances": {
+    "abs_mean_cents": 5.0,
+    "p95_abs_cents": 25.0,
+    "octave_error_rate": 0.0,
+    "unvoiced_spurious_rate": 0.0,
+    "candidate_undecided_rate": 0.9
+   },
+   "cent_stats": {
+    "n_scored_known_frames": 185,
+    "mean_cents": 0.1580156829471551,
+    "abs_mean_cents": 1.7859372550023416,
+    "p95_abs_cents": 3.642489265188044,
+    "max_abs_cents": 6.568149048662213,
+    "octave_errors": 0,
+    "octave_error_rate": 0.0
+   },
+   "voicing": {
+    "unvoiced_frames": 0,
+    "unvoiced_spurious": 0,
+    "unvoiced_spurious_rate": 0.0
+   },
+   "ambiguity": {
+    "candidate_frames": 0,
+    "candidate_undecided": 0,
+    "candidate_undecided_rate": 1.0
+   },
+   "n_failures": 0,
+   "failures": []
+  },
+  "fundamental_absent": {
+   "accepted": true,
+   "tolerances": {
+    "abs_mean_cents": 5.0,
+    "p95_abs_cents": 25.0,
+    "octave_error_rate": 0.0,
+    "unvoiced_spurious_rate": 0.0,
+    "candidate_undecided_rate": 0.9
+   },
+   "cent_stats": {
+    "n_scored_known_frames": 0,
+    "mean_cents": 0.0,
+    "abs_mean_cents": 0.0,
+    "p95_abs_cents": 0.0,
+    "max_abs_cents": 0.0,
+    "octave_errors": 0,
+    "octave_error_rate": 0.0
+   },
+   "voicing": {
+    "unvoiced_frames": 0,
+    "unvoiced_spurious": 0,
+    "unvoiced_spurious_rate": 0.0
+   },
+   "ambiguity": {
+    "candidate_frames": 185,
+    "candidate_undecided": 185,
+    "candidate_undecided_rate": 1.0
+   },
+   "n_failures": 0,
+   "failures": []
+  },
+  "even_take_literal_near_upper_octave": true,
+  "failures": []
+ }
+}

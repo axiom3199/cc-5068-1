@@ -1,0 +1,55 @@
+{
+ "phrase": "phrase_breathy",
+ "tuning_hz": [
+  82.41,
+  110.0,
+  146.83,
+  196.0,
+  246.94,
+  329.63
+ ],
+ "n_strings": 6,
+ "max_fret": 24,
+ "notes": [
+  {
+   "index": 0,
+   "t0": 0.25,
+   "t1": 1.35,
+   "string": 5,
+   "fret": 3,
+   "open_string": false,
+   "pitch_status": "known",
+   "f0_hz": 293.6647679174076,
+   "literal_f0_hz": null,
+   "candidate_lower_hz": null,
+   "candidate_upper_hz": null,
+   "resolved_hz": 293.6647679174076,
+   "resolution": "known",
+   "resolution_anchor_index": null,
+   "label": "breathy D4 (weak partials, strong aspiration)",
+   "midi": 62.0,
+   "resolved_midi": 62.0
+  },
+  {
+   "index": 1,
+   "t0": 1.55,
+   "t1": 2.6,
+   "string": 5,
+   "fret": 1,
+   "open_string": false,
+   "pitch_status": "known",
+   "f0_hz": 261.6255653005986,
+   "literal_f0_hz": null,
+   "candidate_lower_hz": null,
+   "candidate_upper_hz": null,
+   "resolved_hz": 261.6255653005986,
+   "resolution": "known",
+   "resolution_anchor_index": null,
+   "label": "breathy C4",
+   "midi": 60.0,
+   "resolved_midi": 60.0
+  }
+ ],
+ "anchors": [],
+ "edits": []
+}

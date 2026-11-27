@@ -1,0 +1,36 @@
+{
+ "phrase": "pair_f3_even",
+ "tuning_hz": [
+  82.41,
+  110.0,
+  146.83,
+  196.0,
+  246.94,
+  329.63
+ ],
+ "n_strings": 6,
+ "max_fret": 24,
+ "notes": [
+  {
+   "index": 0,
+   "t0": 0.25,
+   "t1": 2.4,
+   "string": 3,
+   "fret": 3,
+   "open_string": false,
+   "pitch_status": "candidate",
+   "f0_hz": 174.61,
+   "literal_f0_hz": 349.22,
+   "candidate_lower_hz": 174.61,
+   "candidate_upper_hz": 349.22,
+   "resolved_hz": null,
+   "resolution": "unresolved",
+   "resolution_anchor_index": null,
+   "label": "pair_f3: fundamental absent (undecidable)",
+   "midi": 53.0,
+   "resolved_midi": null
+  }
+ ],
+ "anchors": [],
+ "edits": []
+}

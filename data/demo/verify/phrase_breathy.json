@@ -1,0 +1,53 @@
+{
+ "accepted": true,
+ "tolerances": {
+  "abs_mean_cents": 5.0,
+  "p95_abs_cents": 25.0,
+  "octave_error_rate": 0.0,
+  "unvoiced_spurious_rate": 0.0,
+  "candidate_undecided_rate": 0.9
+ },
+ "cent_stats": {
+  "n_scored_known_frames": 182,
+  "mean_cents": 0.03428478611829493,
+  "abs_mean_cents": 1.2323343113697474,
+  "p95_abs_cents": 3.1178479268572112,
+  "max_abs_cents": 8.983490343830104,
+  "octave_errors": 0,
+  "octave_error_rate": 0.0
+ },
+ "voicing": {
+  "unvoiced_frames": 41,
+  "unvoiced_spurious": 0,
+  "unvoiced_spurious_rate": 0.0
+ },
+ "ambiguity": {
+  "candidate_frames": 0,
+  "candidate_undecided": 0,
+  "candidate_undecided_rate": 1.0
+ },
+ "n_failures": 3,
+ "failures": [
+  {
+   "kind": "voicing_false_negative",
+   "t": 0.2554,
+   "reference_hz": 293.6647679174076,
+   "state": "noise",
+   "decision": "aperiodic"
+  },
+  {
+   "kind": "voicing_false_negative",
+   "t": 1.3468,
+   "reference_hz": 291.7352316943551,
+   "state": "noise",
+   "decision": "low_confidence"
+  },
+  {
+   "kind": "voicing_false_negative",
+   "t": 1.5557,
+   "reference_hz": 261.6255653005986,
+   "state": "noise",
+   "decision": "aperiodic"
+  }
+ ]
+}
